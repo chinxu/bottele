@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
  
 def kimdong(update: Update, context: CallbackContext) -> None:
-    kim_lich = requests.get("https://nxbkimdong.com.vn/blogs/lich-phat-hanh-sach-dinh-ky")
+    kim_lich = requests.get("https://nxbkimdong.com.vn/blogs/lich-phat-hanh-sach-dinh-ky/")
     soup_kimlich = BeautifulSoup(kim_lich.text,"html.parser")
     mydiv_kim = soup_kimlich.findAll('div',{'class':'article-title'})
     div_final = []
